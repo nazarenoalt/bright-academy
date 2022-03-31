@@ -27,4 +27,8 @@ export const GlobalStyle = createGlobalStyle`
       --moderate-light-gray: #aaaaaa;
       --light-gray: #cfcfcf;
   }
+
+  a {
+    color: var(---white);
+  }
 `;

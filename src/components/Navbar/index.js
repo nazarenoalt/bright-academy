@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // Styles
 import { Wrapper } from "./Navbar.css";
 // Hooks
@@ -14,10 +14,12 @@ const Navbar = () => {
 
   return (
     <Wrapper>
-      <div className="logo">
-        <img src={LogoImage} alt="Bright Academy" />
-      </div>
-      {width < 768 ? <BurgerMenu /> : <Navlist />}
+      <Link to="/">
+        <div className="logo">
+          <img src={LogoImage} alt="Bright Academy" />
+        </div>
+      </Link>
+      {width < 768 ? <BurgerMenu /> : <Navlist width={width} />}
     </Wrapper>
   );
 };

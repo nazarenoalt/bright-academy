@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   background-color: var(--red);
   color: var(--white);
 
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
   .logo {
     img {
       max-height: 80px;
