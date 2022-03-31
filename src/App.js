@@ -13,10 +13,13 @@ import CreatePost from "./pages/CreatePost";
 import Navbar from "./components/Navbar";
 // Context
 import AccountState from "./context/Account/AccountState";
+// Styles
+import { GlobalStyle } from "./GlobalStyle.css";
 
 function App() {
   return (
     <AccountState>
+      <GlobalStyle />
       <BrowserRouter>
         <Navbar />
         <Routes>

@@ -1,25 +1,24 @@
 import React from "react";
-import { NavLink } from "react-router";
-import { useContext } from "react";
-import AccountContext from "../../context/Account/AccountContext";
+
+// Styles
+import { Wrapper } from "./Navbar.css";
+// Hooks
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+// Assets
+import LogoImage from "../../assets/images/logo.jpg";
+import BurgerMenu from "../BurgerMenu";
+import Navlist from "../Navlist";
 
 const Navbar = () => {
-  const { isLogged } = useContext(AccountContext);
+  const { width } = useWindowDimensions();
 
   return (
-    <div>
-      {isLogged ? (
-        <ul>
-          <li>
-            <div>Mi cuenta</div>
-          </li>
-        </ul>
-      ) : (
-        <ul>
-          <li>Registrarse</li>
-        </ul>
-      )}
-    </div>
+    <Wrapper>
+      <div className="logo">
+        <img src={LogoImage} alt="Bright Academy" />
+      </div>
+      {width < 768 ? <BurgerMenu /> : <Navlist />}
+    </Wrapper>
   );
 };
 
