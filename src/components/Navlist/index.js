@@ -1,26 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
 // Context
 import AccountContext from "../../context/Account/AccountContext";
 // Styles
-import { Wrapper } from "./Navlist.css";
+import { Wrapper, Background } from "./Navlist.css";
 
-const Navlist = ({ width }) => {
+const Navlist = ({ device }) => {
   const { isLogged } = useContext(AccountContext);
+
+  const linksObjects = [
+    { addressName: "Home", direction: "/" },
+    { addressName: "Mi cuenta", direction: "/acount" },
+    { addressName: "Cursos", direction: "/courses" },
+    { addressName: "Cerrar Sesion", direction: "/logout" },
+  ];
   return (
     <Wrapper>
+      <Background />
       {isLogged ? (
-        <ul>
-          <li>
-            <NavLink to="/account">Mi cuenta</NavLink>
-          </li>
-          <li>
-            <NavLink to="/courses">Cursos</NavLink>
-          </li>
-          <li>
-            <NavLink to="/logout">Cerrar Sesion</NavLink>
-          </li>
+        <ul className={device}>
+          {linksObjects.map((link) => {
+            return (
+              <li>
+                <NavLink to={link.direction}>{link.addressName}</NavLink>
+              </li>
+            );
+          })}
         </ul>
       ) : (
         <ul>

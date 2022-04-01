@@ -13,16 +13,14 @@ import PostDeleted from "./pages/PostDeleted";
 import Registered from "./pages/Registered";
 import CreatePost from "./pages/CreatePost";
 import Navbar from "./components/Navbar";
-// Context
-import AccountState from "./context/Account/AccountState";
+
 // Styles
 import { GlobalStyle } from "./GlobalStyle.css";
 
 function App() {
   return (
-    <AccountState>
+    <BrowserRouter>
       <GlobalStyle />
-      <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -39,7 +37,6 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-    </AccountState>
   );
 }
 

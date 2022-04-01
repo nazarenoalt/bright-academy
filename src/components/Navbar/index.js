@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Context
+import NavbarState from "../../context/NavbarContext/NavbarState";
 // Styles
 import { Wrapper } from "./Navbar.css";
 // Hooks
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+// Utils
+import { MOBILE_MAX_WIDTH } from "../../utils/constants";
 // Assets
 import LogoImage from "../../assets/images/logo.jpg";
 import BurgerMenu from "../BurgerMenu";
@@ -13,14 +17,17 @@ const Navbar = () => {
   const { width } = useWindowDimensions();
 
   return (
-    <Wrapper>
-      <Link to="/">
-        <div className="logo">
-          <img src={LogoImage} alt="Bright Academy" />
-        </div>
-      </Link>
-      {width < 768 ? <BurgerMenu /> : <Navlist width={width} />}
-    </Wrapper>
+    <NavbarState>
+      <Wrapper>
+        <Link to="/">
+          <div className="logo">
+            <img src={LogoImage} alt="Bright Academy" />
+          </div>
+        </Link>
+        {width < MOBILE_MAX_WIDTH && <BurgerMenu />}
+        <Navlist device={width < MOBILE_MAX_WIDTH ? "mobile" : "desktop"} />
+      </Wrapper>
+    </NavbarState>
   );
 };
 

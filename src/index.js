@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+// Context
+import AccountState from "./context/Account/AccountState";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AccountState>
+      <App />
+    </AccountState>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
