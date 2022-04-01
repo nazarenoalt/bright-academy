@@ -12,7 +12,7 @@ const Navlist = ({ device }) => {
 
   const linksObjects = [
     { addressName: "Home", direction: "/" },
-    { addressName: "Mi cuenta", direction: "/acount" },
+    { addressName: "Mi cuenta", direction: "/account" },
     { addressName: "Cursos", direction: "/courses" },
     { addressName: "Cerrar Sesion", direction: "/logout" },
   ];
@@ -26,7 +26,7 @@ const Navlist = ({ device }) => {
             return (
               <li key={addressName + direction}>
                 <NavLink
-                  className={({ isActive }) => isActive ? "active" : ""}
+                  className={({ isActive }) => (isActive ? "active" : "")}
                   to={direction}
                 >
                   {addressName}
