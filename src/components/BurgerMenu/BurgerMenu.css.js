@@ -1,12 +1,22 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
 
-  transition: all 0.3s;
+  right: 10%;
+  z-index: 10;
+  width: 70px;
+  height: 70px;
+  transition: all 0.125s;
+  padding: 10px;
   cursor: pointer;
-  :hover {
+
+  img {
+    transition: all 0.125s;
+  }
+  .open {
     transform: rotate(0.125turn);
   }
 `;

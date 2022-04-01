@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
       /*Colors*/
       --red: #e8303a;
+      --shaded-red: #d02b34;
       --blue: #33a8dd;
       --blue-2: #008aca;
       --transparent-blue: #7cc7e9bb;
@@ -21,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
       --green-2: #5cb12b;
       --white: #ffffff;
       --dark-blue: #2b357a;
-      --dark-blue-2: #202962;
+      --shaded-blue: #262f6d;
       --transparent-dark-blue: #2b357af8;
       --black: #181818;
       --moderate-light-gray: #aaaaaa;

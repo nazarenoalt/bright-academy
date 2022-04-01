@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
     display: flex;
     width: 100%;
 
-    li {
+    li a {
+      display: block;
       padding: 0px 20px;
       height: 80px;
       text-align: center;
@@ -13,13 +14,24 @@ export const Wrapper = styled.div`
       transition: all 0.13s;
     }
 
-    li:hover {
+    /*  li:hover {
+      
+    } */
+
+    a.active {
       color: var(--dark-blue);
-      border-bottom: 2px solid var(--dark-blue);
+      border-bottom: 3px solid var(--dark-blue);
+    }
+
+    a:hover {
+      color: var(--white);
+      border-bottom: 3px solid var(--white);
+      background-color: var(--shaded-red);
     }
   }
 
   ul.mobile {
+    display: none;
     position: fixed;
     flex-direction: column;
     top: 150px;
@@ -34,21 +46,24 @@ export const Wrapper = styled.div`
       background: var(--transparent-dark-blue);
     }
 
-    li:hover {
+    a:hover,
+    a.active {
+      border-right: 4px solid var(--white);
+      border-bottom: none;
       color: var(--white);
-      filter: brightness(0.8);
-      border: none;
+      background: var(--shaded-blue);
     }
+  }
 
-    li.active {
-      border-right: 2px solid var(--white);
-    }
+  ul.mobile.menuIsOpen {
+    display: block;
   }
 `;
 
 export const Background = styled.div`
+  display: ${(props) => props.display};
   position: fixed;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
   top: 0;
   bottom: 0;
   left: 0;

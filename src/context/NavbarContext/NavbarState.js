@@ -2,16 +2,17 @@ import React from "react";
 import NavbarContext from "./NavbarContext";
 
 const NavbarState = ({ children }) => {
-  const [menuIsOpened, setMenuIsOpened] = React.useState(false);
+  const [menuIsOpen, setMenuIsOpen] = React.useState(false);
 
   const handleMenu = () => {
-    setMenuIsOpened(!menuIsOpened);
+    setMenuIsOpen(!menuIsOpen);
+    console.log(menuIsOpen);
   };
 
   return (
     <NavbarContext.Provider
       value={{
-        menuIsOpened,
+        menuIsOpen,
         handleMenu,
       }}
     >

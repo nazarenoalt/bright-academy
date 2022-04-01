@@ -8,10 +8,15 @@ import { Wrapper } from "./BurgerMenu.css";
 // Assets
 import BurgerMenuIcon from "../../assets/icons/burger-menu.svg";
 const BurgerMenu = () => {
-  const { handleMenu } = useContext(NavbarContext);
+  const { handleMenu, menuIsOpen } = useContext(NavbarContext);
   return (
     <Wrapper>
-      <img src={BurgerMenuIcon} alt="Menu" onClick={handleMenu} />
+      <img
+        src={BurgerMenuIcon}
+        alt="Menu"
+        onClick={handleMenu}
+        className={menuIsOpen ? "open" : "close"}
+      />
     </Wrapper>
   );
 };
