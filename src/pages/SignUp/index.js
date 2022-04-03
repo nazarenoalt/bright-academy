@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from "react";
+// Hooks
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 const SignUp = () => {
-  return (
-    <div>SignUp</div>
-  )
-}
+  const [documentTitle, setDocumentTitle] = useDocumentTitle("Registrarse");
+  return <div>SignUp</div>;
+};
 
-export default SignUp
+export default SignUp;

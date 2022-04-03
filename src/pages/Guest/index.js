@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from "react";
+// Hooks
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 const Guest = () => {
-  return (
-    <div>Guest</div>
-  )
-}
+  const [documentTitle, setDocumentTitle] = useDocumentTitle("Invitado");
+  return <div>Guest</div>;
+};
 
-export default Guest
+export default Guest;

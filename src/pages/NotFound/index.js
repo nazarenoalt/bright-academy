@@ -1,9 +1,10 @@
-import React from 'react'
-
+import React from "react";
+// Hooks
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 const NotFound = () => {
-  return (
-    <div>NotFound</div>
-  )
-}
+  const [documentTitle, setDocumentTitle] =
+    useDocumentTitle("Ruta no encontrada");
+  return <div>NotFound</div>;
+};
 
-export default NotFound
+export default NotFound;

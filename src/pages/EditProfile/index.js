@@ -1,9 +1,9 @@
-import React from 'react'
-
+import React from "react";
+// Hooks
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 const EditProfile = () => {
-  return (
-    <div>EditProfile</div>
-  )
-}
+  const [documentTitle, setDocumentTitle] = useDocumentTitle("Editar Perfil");
+  return <div>EditProfile</div>;
+};
 
-export default EditProfile
+export default EditProfile;
