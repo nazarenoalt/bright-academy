@@ -9,6 +9,7 @@ import { Wrapper, Background } from "./Navlist.css";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 // Constants
 import { MOBILE_MAX_WIDTH } from "../../utils/constants";
+
 const Navlist = ({ device }) => {
   const { isLogged } = useContext(AccountContext);
   const { menuIsOpen } = useContext(NavbarContext);

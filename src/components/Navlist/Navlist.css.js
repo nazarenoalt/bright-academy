@@ -40,7 +40,7 @@ export const Wrapper = styled.div`
     width: 300px;
     margin: auto;
     height: auto;
-    z-index: 3;
+    z-index: 10;
 
     li {
       background: var(--transparent-dark-blue);
@@ -68,5 +68,5 @@ export const Background = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5;
 `;
