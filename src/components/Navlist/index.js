@@ -5,11 +5,14 @@ import AccountContext from "../../context/Account/AccountContext";
 import NavbarContext from "../../context/NavbarContext/NavbarContext";
 // Styles
 import { Wrapper, Background } from "./Navlist.css";
-
+// Hooks
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+// Constants
+import { MOBILE_MAX_WIDTH } from "../../utils/constants";
 const Navlist = ({ device }) => {
   const { isLogged } = useContext(AccountContext);
   const { menuIsOpen } = useContext(NavbarContext);
-
+  const { width } = useWindowDimensions();
   const linksObjects = [
     { addressName: "Home", direction: "/" },
     { addressName: "Mi cuenta", direction: "/account" },
@@ -19,7 +22,9 @@ const Navlist = ({ device }) => {
 
   return (
     <Wrapper>
-      <Background display={menuIsOpen ? "block" : "none"} />
+      {width < MOBILE_MAX_WIDTH && (
+        <Background display={menuIsOpen ? "block" : "none"} />
+      )}
       {isLogged ? (
         <ul className={device + (menuIsOpen ? " menuIsOpen" : "")}>
           {linksObjects.map(({ addressName, direction }) => {
