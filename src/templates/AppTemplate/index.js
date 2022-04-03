@@ -3,13 +3,13 @@ import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 // Styles
-import { Wrapper } from "./AppTemplate.css";
+import { Wrapper, Container } from "./AppTemplate.css";
 
 const AppTemplate = ({ children }) => {
   return (
     <Wrapper>
       <Navbar />
-      {children /* routes */}
+      <Container>{children /* routes */}</Container>
       <Footer />
     </Wrapper>
   );
