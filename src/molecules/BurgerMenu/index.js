@@ -1,6 +1,4 @@
-import React, { useState, useContext } from "react";
-// Components
-import Navlist from "molecules/Navlist";
+import React, { useContext } from "react";
 // Context
 import NavbarContext from "context/NavbarContext/NavbarContext";
 // Styles
