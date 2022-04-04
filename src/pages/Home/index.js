@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 // Hooks
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import useDocumentTitle from "hooks/useDocumentTitle";
 import { Wrapper } from "./Home.css";
 // Context
-import AccountContext from "../../context/Account/AccountContext";
-import Button from "../../molecules/Button";
+import AccountContext from "context/Account/AccountContext";
+import Button from "molecules/Button";
 
 const Home = () => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle("Home");
@@ -22,9 +22,7 @@ const Home = () => {
         <h3>Accede a los cursos</h3>
         <ul className="courses-list">
           <li>
-            <Link to="/courses/junior1">
-
-            </Link>
+            <Link to="/courses/junior1"></Link>
           </li>
         </ul>
       </div>

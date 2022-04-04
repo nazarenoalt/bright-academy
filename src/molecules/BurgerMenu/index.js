@@ -9,6 +9,7 @@ import { Wrapper } from "./BurgerMenu.css";
 import BurgerMenuIcon from "../../assets/icons/burger-menu.svg";
 const BurgerMenu = () => {
   const { handleMenu, menuIsOpen } = useContext(NavbarContext);
+
   return (
     <Wrapper>
       <img
