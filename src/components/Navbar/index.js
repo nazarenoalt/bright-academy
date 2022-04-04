@@ -10,7 +10,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { MOBILE_MAX_WIDTH } from "../../utils/constants";
 // Assets
 import LogoImage from "../../assets/images/logo.jpg";
-import BurgerMenu from "../BurgerMenu";
+import BurgerMenu from "../../molecules/BurgerMenu";
 import Navlist from "../Navlist";
 
 const Navbar = () => {

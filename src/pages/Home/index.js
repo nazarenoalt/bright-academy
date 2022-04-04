@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 // Hooks
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { Wrapper } from "./Home.css";
 // Context
 import AccountContext from "../../context/Account/AccountContext";
-import Button from "../../organisms/Button";
+import Button from "../../molecules/Button";
 
 const Home = () => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle("Home");
@@ -16,6 +16,17 @@ const Home = () => {
         <h1>
           Bienvenido a <span className="page-name">Bright Academy!</span>
         </h1>
+      </div>
+
+      <div className="courses-container">
+        <h3>Accede a los cursos</h3>
+        <ul className="courses-list">
+          <li>
+            <Link to="/courses/junior1">
+
+            </Link>
+          </li>
+        </ul>
       </div>
     </Wrapper>
   );

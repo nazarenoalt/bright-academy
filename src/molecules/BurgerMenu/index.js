@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 // Components
-import Navlist from "../Navlist";
+import Navlist from "../../components/Navlist";
 // Context
 import NavbarContext from "../../context/NavbarContext/NavbarContext";
 // Styles
