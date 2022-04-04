@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+import { Redirect } from "react-router-dom";
 // Hooks
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import { Wrapper } from "./Home.css";
@@ -15,14 +16,6 @@ const Home = () => {
         <h1>
           Bienvenido a <span className="page-name">Bright Academy!</span>
         </h1>
-        {isLogged ? (
-          <div></div>
-        ) : (
-          <div>
-            <Button>Iniciar Sesion</Button> o <Button>Registrate</Button> <br />
-            para seguir aprendiendo!
-          </div>
-        )}
       </div>
     </Wrapper>
   );

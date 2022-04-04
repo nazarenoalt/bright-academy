@@ -16,9 +16,9 @@ const Navlist = ({ device }) => {
   const { width } = useWindowDimensions();
   const linksObjects = [
     { addressName: "Home", direction: "/" },
-    { addressName: "Mi cuenta", direction: "/account" },
+    { addressName: "Mi cuenta", direction: "/account/profile" },
     { addressName: "Cursos", direction: "/courses" },
-    { addressName: "Cerrar Sesion", direction: "/logout" },
+    { addressName: "Cerrar Sesion", direction: "/account/logout" },
   ];
 
   return (

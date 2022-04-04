@@ -1,4 +1,5 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 // Template
 import AppTemplate from "./templates/AppTemplate";
 // Pages
@@ -16,21 +17,58 @@ import Registered from "./pages/Registered";
 import CreatePost from "./pages/CreatePost";
 // Styles
 import { GlobalStyle } from "./GlobalStyle.css";
+// Context
+import AccountContext from "./context/Account/AccountContext";
 
 function App() {
+  const { isLogged } = useContext(AccountContext);
+
   return (
     <BrowserRouter>
       <GlobalStyle />
       <AppTemplate>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/edit-profile" element={<EditProfile />} />
-          <Route path="/guest" element={<Guest />} />
-          <Route path="/account/profile" element={<Profile />} />
-          <Route path="/account/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              isLogged ? <Home /> : <Navigate replace to="/account/login" />
+            }
+          />
+          <Route
+            path="/courses"
+            element={
+              isLogged ? <Courses /> : <Navigate replace to="/account/login" />
+            }
+          />
+          <Route
+            path="/edit-profile"
+            element={
+              isLogged ? (
+                <EditProfile />
+              ) : (
+                <Navigate replace to="/account/login" />
+              )
+            }
+          />
+          <Route
+            path="/account/profile"
+            element={
+              isLogged ? <Profile /> : <Navigate replace to="/account/login" />
+            }
+          />
           <Route path="/post/deleted" element={<PostDeleted />} />
-          <Route path="/post/create-post" element={<CreatePost />} />
+          <Route
+            path="/post/create-post"
+            element={
+              isLogged ? (
+                <CreatePost />
+              ) : (
+                <Navigate replace to="/account/login" />
+              )
+            }
+          />
+          <Route path="/account/login" element={<Login />} />
+          <Route path="/guest" element={<Guest />} />
           <Route path="/account/success" element={<Registered />} />
           <Route path="/account/signup" element={<SignUp />} />
           <Route path="/account/logout" element={<Logout />} />
