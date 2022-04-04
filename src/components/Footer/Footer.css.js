@@ -1,14 +1,16 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: absolute;
-  min-height: 120px;
+  display: grid;
+  place-content: center;
+  height: 219px;
   width: 100%;
-  bottom: 0;
   z-index: -1;
+  background-color: var(--red);
+
   .grid-container {
+    width: 80vw;
     padding: 5%;
-    background-color: var(--red);
     color: var(--white);
   }
 
@@ -29,6 +31,8 @@ export const Wrapper = styled.div`
     place-content: center;
   }
   @media screen and (min-width: 768px) {
+    display: block;
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

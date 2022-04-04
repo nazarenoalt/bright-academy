@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   background-color: var(--dark-blue);
   background-image: url(${(props) => props.image});
   background-size: 100%;
-  min-width: 250px;
+  min-width: 300px;
   height: 300px;
   border-radius: 15px;
   transition: all 0.2s;

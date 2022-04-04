@@ -2,10 +2,27 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   width: 80%;
-  height: 1000px;
+  padding: 30px 5%;
+
+  h3 {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
   ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  li {
+    margin: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    ul {
+      flex-direction: row;
+    }
   }
 `;

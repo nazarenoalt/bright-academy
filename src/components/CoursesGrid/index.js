@@ -8,13 +8,6 @@ const CoursesGrid = () => {
   const courses = [
     { title: "Junior 1", link: "/courses/junior1", image: libraryPhoto },
     { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
   ];
   return (
     <Wrapper>
