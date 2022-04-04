@@ -1,6 +1,6 @@
 import React from "react";
 // Hooks
-import useDocumentTitle from "../../hooks/useDocumentTitle";
+import useDocumentTitle from "hooks/useDocumentTitle";
 
 const Courses = () => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle("Cursos");

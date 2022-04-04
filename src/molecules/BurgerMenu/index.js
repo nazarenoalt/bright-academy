@@ -1,12 +1,12 @@
 import React, { useState, useContext } from "react";
 // Components
-import Navlist from "../../components/Navlist";
+import Navlist from "molecules/Navlist";
 // Context
-import NavbarContext from "../../context/NavbarContext/NavbarContext";
+import NavbarContext from "context/NavbarContext/NavbarContext";
 // Styles
 import { Wrapper } from "./BurgerMenu.css";
 // Assets
-import BurgerMenuIcon from "../../assets/icons/burger-menu.svg";
+import BurgerMenuIcon from "assets/icons/burger-menu.svg";
 const BurgerMenu = () => {
   const { handleMenu, menuIsOpen } = useContext(NavbarContext);
 

@@ -1,7 +1,7 @@
 import React from "react";
 // Components
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from "components/Navbar";
+import Footer from "components/Footer";
 // Styles
 import { Wrapper, Container } from "./AppTemplate.css";
 

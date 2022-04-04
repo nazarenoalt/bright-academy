@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 // Context
-import NavbarState from "../../context/NavbarContext/NavbarState";
+import NavbarState from "context/NavbarContext/NavbarState";
 // Styles
 import { Wrapper } from "./Navbar.css";
 // Hooks
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import useWindowDimensions from "hooks/useWindowDimensions";
 // Utils
-import { MOBILE_MAX_WIDTH } from "../../utils/constants";
+import { MOBILE_MAX_WIDTH } from "utils/constants";
 // Assets
-import LogoImage from "../../assets/images/logo.jpg";
-import BurgerMenu from "../../molecules/BurgerMenu";
-import Navlist from "../Navlist";
+import LogoImage from "assets/images/logo.jpg";
+import BurgerMenu from "molecules/BurgerMenu";
+import Navlist from "molecules/Navlist";
 
 const Navbar = () => {
   const { width } = useWindowDimensions();

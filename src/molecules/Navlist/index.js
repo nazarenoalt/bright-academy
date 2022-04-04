@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 // Context
-import AccountContext from "../../context/Account/AccountContext";
-import NavbarContext from "../../context/NavbarContext/NavbarContext";
+import AccountContext from "context/Account/AccountContext";
+import NavbarContext from "context/NavbarContext/NavbarContext";
 // Styles
 import { Wrapper, Background } from "./Navlist.css";
 // Hooks
-import useWindowDimensions from "../../hooks/useWindowDimensions";
+import useWindowDimensions from "hooks/useWindowDimensions";
 // Constants
-import { MOBILE_MAX_WIDTH } from "../../utils/constants";
+import { MOBILE_MAX_WIDTH } from "utils/constants";
 
 const Navlist = ({ device }) => {
   const { isLogged } = useContext(AccountContext);

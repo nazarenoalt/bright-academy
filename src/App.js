@@ -1,24 +1,24 @@
 import { useContext } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 // Template
-import AppTemplate from "./templates/AppTemplate";
+import AppTemplate from "templates/AppTemplate";
 // Pages
-import Home from "./pages/Home";
-import Courses from "./pages/Courses";
-import Profile from "./pages/Profile";
-import EditProfile from "./pages/EditProfile";
-import Guest from "./pages/Guest";
-import Login from "./pages/Login";
-import Logout from "./pages/Logout";
-import SignUp from "./pages/SignUp";
-import NotFound from "./pages/NotFound";
-import PostDeleted from "./pages/PostDeleted";
-import Registered from "./pages/Registered";
-import CreatePost from "./pages/CreatePost";
+import Home from "pages/Home";
+import Courses from "pages/Courses";
+import Profile from "pages/Profile";
+import EditProfile from "pages/EditProfile";
+import Guest from "pages/Guest";
+import Login from "pages/Login";
+import Logout from "pages/Logout";
+import SignUp from "pages/SignUp";
+import NotFound from "pages/NotFound";
+import PostDeleted from "pages/PostDeleted";
+import Registered from "pages/Registered";
+import CreatePost from "pages/CreatePost";
 // Styles
-import { GlobalStyle } from "./GlobalStyle.css";
+import { GlobalStyle } from "GlobalStyle.css";
 // Context
-import AccountContext from "./context/Account/AccountContext";
+import AccountContext from "context/Account/AccountContext";
 
 function App() {
   const { isLogged } = useContext(AccountContext);
