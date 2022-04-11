@@ -7,5 +7,6 @@ export const Wrapper = styled.div`
 
 export const Container = styled.div`
   padding: 50px 5%;
+  height: 1px;
   min-height: calc(100% - 200px);
 `;

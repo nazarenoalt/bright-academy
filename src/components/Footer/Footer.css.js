@@ -9,7 +9,6 @@ export const Wrapper = styled.div`
   background-color: var(--red);
 
   .grid-container {
-    width: 80vw;
     padding: 5%;
     color: var(--white);
   }
