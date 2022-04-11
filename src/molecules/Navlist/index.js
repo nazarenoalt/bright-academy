@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 // Context
-import AccountContext from "context/Account/AccountContext";
+import AccountContext from "context/AccountContext/AccountContext";
 import NavbarContext from "context/NavbarContext/NavbarContext";
 // Styles
 import { Wrapper, Background } from "./Navlist.css";

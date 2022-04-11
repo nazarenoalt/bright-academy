@@ -18,7 +18,7 @@ import CreatePost from "pages/CreatePost";
 // Styles
 import { GlobalStyle } from "GlobalStyle.css";
 // Context
-import AccountContext from "context/Account/AccountContext";
+import AccountContext from "context/AccountContext/AccountContext";
 
 function App() {
   const { isLogged } = useContext(AccountContext);

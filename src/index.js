@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "App";
 // Context
-import AccountState from "context/Account/AccountState";
+import AccountState from "context/AccountContext/AccountState";
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 // Context
 import NavbarState from "context/NavbarContext/NavbarState";
+import AccountState from "context/AccountContext/AccountState";
+import AccountContext from "context/AccountContext/AccountContext";
 // Styles
 import { Wrapper } from "./Navbar.css";
 // Hooks
@@ -15,18 +17,21 @@ import Navlist from "molecules/Navlist";
 
 const Navbar = () => {
   const { width } = useWindowDimensions();
+  const { isLogged } = useContext(AccountContext);
 
   return (
     <NavbarState>
-      <Wrapper>
-        <Link to="/">
-          <div className="logo">
-            <img src={LogoImage} alt="Bright Academy" />
-          </div>
-        </Link>
-        {width < MOBILE_MAX_WIDTH && <BurgerMenu />}
-        <Navlist device={width < MOBILE_MAX_WIDTH ? "mobile" : "desktop"} />
-      </Wrapper>
+      <AccountState>
+        <Wrapper>
+          <Link to="/">
+            <div className="logo">
+              <img src={LogoImage} alt="Bright Academy" />
+            </div>
+          </Link>
+          {width < MOBILE_MAX_WIDTH && isLogged && <BurgerMenu />}
+          <Navlist device={width < MOBILE_MAX_WIDTH ? "mobile" : "desktop"} />
+        </Wrapper>
+      </AccountState>
     </NavbarState>
   );
 };

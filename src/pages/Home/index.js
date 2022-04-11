@@ -7,7 +7,7 @@ import Button from "molecules/Button";
 import useDocumentTitle from "hooks/useDocumentTitle";
 import { Wrapper } from "./Home.css";
 // Context
-import AccountContext from "context/Account/AccountContext";
+import AccountContext from "context/AccountContext/AccountContext";
 import CoursesGrid from "../../components/CoursesGrid";
 
 const Home = () => {
