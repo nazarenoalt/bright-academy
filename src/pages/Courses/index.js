@@ -3,13 +3,14 @@ import React from "react";
 import useDocumentTitle from "hooks/useDocumentTitle";
 // Styles
 import { Wrapper } from "./Courses.css";
-import CourseCard from "molecules/CourseCard";
+import CoursesGrid from "components/CoursesGrid";
+
 const Courses = () => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle("Cursos");
 
   return (
     <Wrapper>
-      <CourseCard />
+      <CoursesGrid />
     </Wrapper>
   );
 };
