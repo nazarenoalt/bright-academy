@@ -1,42 +1,52 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  position: relative;
-  background-color: var(--dark-blue);
-  background-image: url(${(props) => props.image});
-  background-size: 100%;
-  min-width: 300px;
-  height: 300px;
-  border-radius: 15px;
-  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-betwxeen;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: 0.125s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 
-  /* Before represent gradient */
-  ::before {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    border-radius: 15px;
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.92) 0%,
-      rgba(0, 0, 0, 0) 60%
-    );
+  :active {
+    transform: scale(0.95);
   }
 
-  :hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+  .header-image {
+    width: 80px;
+    border-right: 1px solid var(--dark-blue);
+    padding-right: 15px;
   }
-  h3 {
-    position: absolute;
-    color: var(--white);
-    text-decoration: none;
-    bottom: 10px;
-    padding-left: 20px;
-    font-size: 1.5rem;
+
+  .data-container {
+    padding-left: 15px;
+    .post-title {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    .date {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    :hover {
+      transform: scale(1.05);
+    }
+    :active {
+      transform: scale(1);
+    }
+
+    .data-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 `;

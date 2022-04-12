@@ -1,30 +1,43 @@
 import React from "react";
-import { Wrapper } from "./CoursesGrid.css";
+// Components
 import CourseCard from "molecules/CourseCard";
 // Assets
-import libraryPhoto from "assets/images/libraryPhoto.jpg";
+import { Wrapper } from "./CoursesGrid.css";
 
-const CoursesGrid = () => {
+const CoursesGrid = ({ level }) => {
   const courses = [
-    { title: "Junior 1", link: "/courses/junior1", image: libraryPhoto },
-    { title: "Junior 2", link: "/courses/junior2", image: libraryPhoto },
+    {
+      title: "Texto random para ver como queda",
+
+      level: "junior-1",
+      category: "junior 1",
+      emojiId: "191-happy",
+      date: "02/10/2022",
+    },
+    {
+      title: "Ejemplo de titulo uno",
+
+      level: "junior-2",
+      category: "junior 1",
+      emojiId: "005-explosion",
+      date: "02/10/2022",
+    },
   ];
+
   return (
     <Wrapper>
-      <h3>Accede a los cursos</h3>
-      <ul className="courses-list">
-        {courses.map((course) => {
-          return (
-            <li key={course.title}>
-              <CourseCard
-                image={course.image}
-                title={course.title}
-                link={course.link}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <h2 className="section-title">Cursos para {level}</h2>
+      {courses.map(
+        ({ title, description, category, emojiId, date, author }) => (
+          <CourseCard
+            key={title}
+            title={title}
+            category={category}
+            emojiId={emojiId}
+            date={date}
+          />
+        )
+      )}
     </Wrapper>
   );
 };

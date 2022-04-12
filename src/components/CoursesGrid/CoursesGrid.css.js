@@ -1,28 +1,21 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
-  width: 80%;
-  padding: 30px 5%;
+export const Wrapper = styled.ul`
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
 
-  h3 {
-    padding-bottom: 20px;
-    font-size: 1.5rem;
-    text-align: center;
+  .section-title {
+    margin-bottom: 15px;
   }
+  // Setting for desktop
+  @media screen and (min-width: 1024px) {
+    width: 60%;
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  li {
-    margin: 15px;
-  }
-
-  @media screen and (min-width: 768px) {
-    ul {
-      flex-direction: row;
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
     }
   }
 `;

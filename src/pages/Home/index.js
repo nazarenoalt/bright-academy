@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 // Components
-import CourseCard from "molecules/CourseCard";
+import CoursesCategoryGrid from "../../components/CoursesCategoryGrid";
 import Button from "molecules/Button";
 // Hooks
 import useDocumentTitle from "hooks/useDocumentTitle";
+// Styles
 import { Wrapper } from "./Home.css";
 // Context
 import AccountContext from "context/AccountContext/AccountContext";
-import CoursesGrid from "../../components/CoursesGrid";
 
 const Home = () => {
   const [documentTitle, setDocumentTitle] = useDocumentTitle("Home");
@@ -21,7 +21,7 @@ const Home = () => {
         </h1>
       </div>
 
-      <CoursesGrid />
+      <CoursesCategoryGrid />
     </Wrapper>
   );
 };
