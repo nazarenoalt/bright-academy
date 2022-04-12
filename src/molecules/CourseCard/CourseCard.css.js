@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 
   /* Before represent gradient */
   ::before {
-    position: absolute;
+    position: absolute; 
     display: block;
     content: "";
     width: 100%;
