@@ -2,7 +2,7 @@ import React from "react";
 import AccountContext from "./AccountContext";
 
 const AccountState = ({ children }) => {
-  const [isLogged, setIsLogged] = React.useState(false);
+  const [isLogged, setIsLogged] = React.useState(true);
 
   const handleLoginStatus = () => {
     setIsLogged(!isLogged);
