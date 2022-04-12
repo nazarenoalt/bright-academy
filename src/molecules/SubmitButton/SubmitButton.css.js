@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
-export const Submit = styled.input`
-  border: none;
-  padding: 10px 15px;
-  background: var(--dark-blue);
-  border-radius: 5px;
-  color: var(--white);
-  transition: all 0.2s;
-  margin: 10px;
+export const Wrapper = styled.div`
+  display: inline-block;
+  padding: 10px;
 
   .small {
     font-size: initial;
@@ -20,7 +15,17 @@ export const Submit = styled.input`
   .large {
     font-size: 1.2rem;
   }
+`;
 
+export const Submit = styled.input`
+  margin: 0 auto;
+  display: block;
+  border: none;
+  padding: 10px 15px;
+  background: var(--dark-blue);
+  border-radius: 5px;
+  color: var(--white);
+  transition: all 0.2s;
   :hover {
     filter: brightness(1.2);
   }

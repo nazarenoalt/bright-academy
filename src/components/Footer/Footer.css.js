@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: grid;
   place-content: center;
-  height: 219px;
+  min-height: 219px;
   width: 100%;
   z-index: -1;
   background-color: var(--red);

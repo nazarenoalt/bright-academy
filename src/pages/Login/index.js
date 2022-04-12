@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 // Components
 import SubmitButton from "molecules/SubmitButton";
 // Hooks
@@ -35,6 +36,10 @@ const Login = () => {
           </label>
         </div>
         <SubmitButton size="large">Ingresar</SubmitButton>
+        <span>
+          ¿Todavía no tenés usuario?{" "}
+          <NavLink to="/account/signup">Registrate aquí</NavLink>
+        </span>
       </form>
     </Wrapper>
   );

@@ -14,10 +14,13 @@ export const Wrapper = styled.div`
       transition: all 0.13s;
     }
 
+<<<<<<< HEAD
     /*  li:hover {
       
     } */
 
+=======
+>>>>>>> SignUpPage
     a.active {
       color: var(--dark-blue);
       border-bottom: 3px solid var(--dark-blue);
@@ -28,6 +31,16 @@ export const Wrapper = styled.div`
       border-bottom: 3px solid var(--white);
       background-color: var(--shaded-red);
     }
+<<<<<<< HEAD
+=======
+
+    .unregistered-user__li {
+      a.active {
+        color: var(--white);
+        border-bottom: 3px solid var(--white);
+      }
+    }
+>>>>>>> SignUpPage
   }
 
   ul.mobile {

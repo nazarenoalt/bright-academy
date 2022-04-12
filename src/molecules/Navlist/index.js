@@ -43,7 +43,13 @@ const Navlist = ({ device }) => {
         </ul>
       ) : (
         <ul>
+<<<<<<< HEAD
           <NavLink to="/login">Registrarse / Iniciar Sesion</NavLink>
+=======
+          <li className="unregistered-user__li">
+            <NavLink to="/account/login">Registrarse / Iniciar Sesion</NavLink>
+          </li>
+>>>>>>> SignUpPage
         </ul>
       )}
     </Wrapper>
