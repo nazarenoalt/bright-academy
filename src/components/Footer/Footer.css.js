@@ -29,6 +29,11 @@ export const Wrapper = styled.div`
     display: grid;
     place-content: center;
   }
+
+  ul li {
+    color: var(--white);
+  }
+
   @media screen and (min-width: 768px) {
     display: block;
 

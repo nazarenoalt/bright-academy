@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
       font-family: 'Poppins', Arial, Helvetica, sans-serif;
       list-style: none;
+      color: var(--black);
       
       /*Colors*/
       --red: #e8303a;
